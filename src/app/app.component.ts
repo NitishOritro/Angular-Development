@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Shop-List';
+
+  loadedFeatureData = 'recipe';
+
+  onNavigate(dataFromFeature: string){
+
+    this.loadedFeatureData = dataFromFeature;
+    console.log('Data From header APP compo'+dataFromFeature);
+
+  }
+
+
+ // console.log('jkhkjhkjhk');
 }
