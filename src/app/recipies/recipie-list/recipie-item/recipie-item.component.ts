@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Recipe } from '../../recipe.model';
 
 @Component({
@@ -10,7 +10,17 @@ export class RecipieItemComponent {
 
   @Input() recipeValue: Recipe;
 
+  //emit my event form onSelected()
+  @Output() recipeSelected = new EventEmitter<void>() //void - it contans no information
+
+
   constructor(){
+
+  }
+
+  onSelected(){
+    console.log(this.recipeSelected);
+    this.recipeSelected.emit();
 
   }
 

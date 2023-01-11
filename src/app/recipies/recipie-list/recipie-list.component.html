@@ -10,7 +10,8 @@
   <div class="col-xs-12">
     <app-recipie-item
     *ngFor="let recipiesElement of recipesObject"
-    [recipeValue]="recipiesElement">
+    [recipeValue]="recipiesElement"
+    (recipeSelected)="onRecipeSelected(recipiesElement)">
   </app-recipie-item>
   </div>
 </div>

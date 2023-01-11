@@ -1,9 +1,18 @@
-<p>recipies works!</p>
 <div class="row">
   <div class="col-md-5">
-    <app-recipie-list></app-recipie-list>
+    <app-recipie-list
+    (recipeWasSelected)="selectedRecipe = $event">
+  </app-recipie-list>
   </div>
   <div class="col-md-7">
-    <app-recipie-detail></app-recipie-detail>
+    <app-recipie-detail
+    *ngIf="selectedRecipe; else infoText"></app-recipie-detail>
+
+    <ng-template #infoText>
+      <h3>Please Select a Recipe!</h3>
+    </ng-template>
+
   </div>
+
 </div>
+
