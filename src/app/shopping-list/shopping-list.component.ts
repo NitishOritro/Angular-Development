@@ -12,4 +12,15 @@ export class ShoppingListComponent {
   constructor(){
 
   }
+
+  onIngredientItemAdded(newingredientItemObject: Ingredient) {
+
+    console.log("before "+JSON.stringify(this.ingredients));
+
+    this.ingredients.push(newingredientItemObject);
+
+    console.log("after "+JSON.stringify(this.ingredients));
+
+  }
+
 }
